@@ -1,6 +1,3 @@
-<?php include_once 'header.php'?>
-<?php include_once 'navigation.php'?>
-
 <main class="main">
     <div class="form-container">
         <form method="post" action="login.php" class="form-auth">
@@ -13,5 +10,3 @@
         </form>
     </div>
 </main>
-
-<?php include_once 'footer.php'?>
