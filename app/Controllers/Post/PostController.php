@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controllers\Post;
 
+use App\Models\Post\Post;
 use Core\Controller\Controller;
 
 /**
@@ -22,6 +23,8 @@ class PostController extends Controller
 
     public function list()
     {
-        $this->render('posts/posts-list');
+        $postList = Post::getAll();
+
+        $this->render('posts/posts-list', compact('postList'));
     }
 }
