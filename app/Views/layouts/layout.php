@@ -1,3 +1,4 @@
+<?php /** @var $view*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +11,15 @@
 <header class="header">
     <div class="container">
         <nav class="nav-link">
-            <a href="../auth/login.php">login</a>
-            <a href="../auth/register.php">register</a>
-            <a href="../posts/posts-list.php">posts list</a>
-            <a href="../profile/profile.php">profile</a>
+            <a href="/login">login</a>
+            <a href="/register">register</a>
+            <a href="/posts">posts list</a>
+            <a href="/profile">profile</a>
         </nav>
     </div>
 </header>
 
-<main class="main">
-
-</main>
+<?php include_once '../app/Views/' . $view . '.php'?>
 
 <footer class="footer">
     <div class="container">

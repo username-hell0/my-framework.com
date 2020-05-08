@@ -27,7 +27,7 @@ class Application
     {
         list($controller, $method) = $this->router->getController();
 
-        echo $controller;
-        echo $method;
+        $classController = new $controller();
+        $classController->$method();
     }
 }
