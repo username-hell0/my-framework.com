@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Regular.ttf") format('truetype');
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+}
+
+/**============Header===================*/
+
+.header {
+    padding: 15px 0 15px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.nav-link {
+    display: flex;
+}
+
+.nav-link a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/**====================================*/
+
+.main {
+    flex: 1 0 0;
+    display: flex;
+}
+
+.container {
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/**============Post===================*/
+
+.post {
+    margin: 25px 0 45px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.post:last-child {
+    border: none;
+}
+
+.post-title {
+    margin-bottom: 20px;
+}
+
+.post-info {
+    display: flex;
+}
+
+.post-img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.content-text {
+    margin: 15px 0 25px 0;
+}
+
+/*=============Footer==================*/
+
+.footer {
+    padding: 15px 0 15px 0;
+    border-top: 1px solid #ebebeb
+}
+
+/*====================================*/
