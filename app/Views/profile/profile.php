@@ -1,6 +1,3 @@
-<?php include_once 'header.php'?>
-<?php include_once 'navigation.php'?>
-
 <main class="main">
     <div class="container">
         <div class="profile">
@@ -49,5 +46,3 @@
         </div>
     </div>
 </main>
-
-<?php include_once 'footer.php'?>
