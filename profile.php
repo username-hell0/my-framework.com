@@ -1,22 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="coffee.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>Profile</title>
-</head>
-<body>
-<header class="header">
-    <div class="container">
-        <nav class="nav-link">
-            <a href="login.html">login</a>
-            <a href="register.html">register</a>
-            <a href="posts-list.html">posts list</a>
-            <a href="profile.html">profile</a>
-        </nav>
-    </div>
-</header>
+<?php include_once 'header.php'?>
+<?php include_once 'navigation.php'?>
 
 <main class="main">
     <div class="container">
@@ -67,10 +50,4 @@
     </div>
 </main>
 
-<footer class="footer">
-    <div class="container">
-        <p>&copy; 2020 Copyright: my-framework.com</p>
-    </div>
-</footer>
-</body>
-</html>
+<?php include_once 'footer.php'?>
