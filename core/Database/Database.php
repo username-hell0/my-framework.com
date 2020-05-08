@@ -24,7 +24,7 @@ class Database
      *
      * @return static
      */
-    public static function getInstance() : self
+    public static function getInstance(): self
     {
         if (self::$instance === null) {
             self::$instance = new self();
@@ -52,11 +52,13 @@ class Database
         );
     }
 
-    public function query(string $sql) : array
+    public function query(string $sql, array $params, string $className): array
     {
-        $sth = $this->pdo->query($sql);
+        $sth = $this->pdo->prepare($sql);
 
-        return $sth->fetchAll();
+        $sth->execute($params);
+
+        return $sth->fetchAll(PDO::FETCH_CLASS, $className);
     }
 
     private function __clone()

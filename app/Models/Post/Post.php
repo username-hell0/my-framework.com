@@ -4,14 +4,30 @@ declare(strict_types=1);
 
 namespace App\Models\Post;
 
-use Core\Database\Database;
+use Core\Model\ActiveRecord;
 
-class Post
+/**
+ * Class Post
+ * @package App\Models\Post
+ *
+ * @property $id
+ * @property $title
+ * @property $author
+ * @property $publisher
+ * @property $srcImg
+ * @property $content
+ */
+class Post extends ActiveRecord
 {
-    public static function getAll()
-    {
-        $dataBase = Database::getInstance();
+    public $id;
+    public $title;
+    public $author;
+    public $publisher;
+    public $srcImg;
+    public $content;
 
-        return $dataBase->query("SELECT * FROM `post`");
+    public static function getTable(): string
+    {
+        return 'post';
     }
 }

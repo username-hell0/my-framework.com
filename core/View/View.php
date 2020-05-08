@@ -21,7 +21,7 @@ class View implements ViewInterface
      *
      * @return string
      */
-    public function getTitle() : string
+    public function getTitle(): string
     {
         return $this->title;
     }
@@ -33,7 +33,7 @@ class View implements ViewInterface
      *
      * @return void
      */
-    public function setTitle(string $title) : void
+    public function setTitle(string $title): void
     {
         $this->title = $title;
     }
@@ -55,7 +55,7 @@ class View implements ViewInterface
      *
      * @return void
      */
-    public function setTemplate(string $template) : void
+    public function setTemplate(string $template): void
     {
         $this->template = $template;
     }
@@ -68,7 +68,7 @@ class View implements ViewInterface
      *
      * @return void
      */
-    public function render(string $view = '', array $data = []) : void
+    public function render(string $view = '', array $data = []): void
     {
         extract($data);
 

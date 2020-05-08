@@ -20,7 +20,7 @@ class Config
      * Get settings for Router
      * @return array
      */
-    public static function getRoutes() : array
+    public static function getRoutes(): array
     {
         return static::$routes;
     }
@@ -30,7 +30,7 @@ class Config
      *
      * @param $routers
      */
-    public static function setRoutes(array $routers) : void
+    public static function setRoutes(array $routers): void
     {
         static::$routes = $routers;
     }
@@ -40,7 +40,7 @@ class Config
      *
      * @return array
      */
-    public static function getDataBase() : array
+    public static function getDataBase(): array
     {
         return static::$dataBase;
     }
@@ -50,7 +50,7 @@ class Config
      *
      * @param mixed $dataBase
      */
-    public static function setDataBase(array $dataBase) : void
+    public static function setDataBase(array $dataBase): void
     {
         static::$dataBase = $dataBase;
     }
