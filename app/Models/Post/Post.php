@@ -4,10 +4,14 @@ declare(strict_types=1);
 
 namespace App\Models\Post;
 
+use Core\Database\Database;
+
 class Post
 {
     public static function getAll()
     {
-        return require_once '../app/Models/posts-data.php';
+        $dataBase = Database::getInstance();
+
+        return $dataBase->query("SELECT * FROM `post`");
     }
 }
