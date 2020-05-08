@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Core\Router;
 
+use Core\Exceptions\InvalidRouteException;
+
 /**
  * Class Router
  * @package Core\Router
@@ -50,7 +52,10 @@ class Router implements RouterInterface
      * This is the method checks the current URL for its presence
      * in the array $routes and returns the controller.
      *
+     * If not, then throws an InvalidRouteException
+     *
      * @return array
+     * @throws InvalidRouteException
      */
     public function getController(): array
     {
@@ -65,5 +70,7 @@ class Router implements RouterInterface
                 return $array;
             }
         }
+
+        throw new InvalidRouteException();
     }
 }

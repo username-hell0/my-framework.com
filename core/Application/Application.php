@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Core\Application;
 
+use App\Controllers\Error\ErrorController;
+use Core\Exceptions\InvalidRouteException;
 use Core\Router\RouterInterface;
 
 /**
@@ -25,9 +27,16 @@ class Application
 
     public function start()
     {
-        list($controller, $method) = $this->router->getController();
+        try {
+            list($controller, $method) = $this->router->getController();
 
-        $classController = new $controller();
-        $classController->$method();
+            $classController = new $controller();
+            $classController->$method();
+        } catch (InvalidRouteException $exception) {
+            http_response_code(404);
+
+            $errorController = new ErrorController();
+            $errorController->pageNotFound();
+        }
     }
 }
