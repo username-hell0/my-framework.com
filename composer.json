@@ -6,7 +6,8 @@
             "email": "vladpomazan22@gmail.com"
         }
     ],
-    "require": {
+    "require": {},
+    "autoload": {
         "psr-4": {
             "Core\\": "core",
             "App\\": "app"
