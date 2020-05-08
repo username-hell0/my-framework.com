@@ -1,92 +1,30 @@
 <?php include_once 'header.php'?>
 <?php include_once 'navigation.php'?>
 
-<main class="main">
-    <div class="container">
-        <div class="posts-list">
+<?php $postList = include_once 'posts-data.php'?>
+
+<div class="container">
+    <div class="posts-list">
+        <?php foreach ($postList as $post) : ?>
             <div class="post">
-                <h3 class="post-title">Что такое Lorem Ipsum?</h3>
+                <h3 class="post-title"><?= $post['title']?></h3>
                 <div class="post-info">
                     <p>
-                        24.05.2020, admin
+                        <?= $post['publisher']?>,
+                        <?= $post['author']?>
                     </p>
                 </div>
 
-                <img src="https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg"
+                <img src="<?= $post['src_img']?>"
                      alt="post-img" class="post-img">
                 <div class="content-post">
                     <p class="content-text">
-                        Lorem Ipsum - это текст-"рыба", часто используемый в печати
-                        и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
-                        текстов на латинице с начала XVI века. В то время некий
-                        безымянный печатник создал большую коллекцию размеров и
-                        форм шрифтов, используя Lorem Ipsum для распечатки образцов.
-                        Lorem Ipsum не только успешно пережил без заметных изменений
-                        пять веков, но и перешагнул в электронный дизайн. Его популяризации
-                        в новое время послужили публикация листов Letraset с образцами
-                        Lorem Ipsum в 60-х годах и, в более недавнее время, программы
-                        электронной вёрстки типа Aldus PageMaker, в шаблонах которых
-                        используется Lorem Ipsum.
+                        <?= $post['content']?>
                     </p>
                 </div>
             </div>
-
-            <div class="post">
-                <h3 class="post-title">Access Unlimited Downloads of Premium Themes and Plugins!</h3>
-                <div class="post-info">
-                    <p>
-                        29.04.2020, admin
-                    </p>
-                </div>
-
-                <img src="https://www.w3schools.com/howto/img_snow_wide.jpg"
-                     alt="post-img" class="post-img">
-                <div class="content-post">
-                    <p class="content-text">
-                        From the very same people that gave rise to ThemeForest, and the
-                        the community that brought us items such as Avada, WPBakery Page
-                        Builder and the X Theme, we now get unlimited WordPress downloads
-                        too thanks to their latest subscription-based product – Envato
-                        Elements! The subscription is currently priced at $29/m, and
-                        all their WordPress content gets unlocked when you order an
-                        annual subscription of Envato Elements. This is a massive deal
-                        because it provides Web Designers with creative freedom unlike
-                        anything ever seen in the WordPress Scene before.
-                    </p>
-                </div>
-            </div>
-
-            <div class="post">
-                <h3 class="post-title">24 Hour Flash Sale: Unlimited Downloads of Photos, Graphics, Fonts & Templates</h3>
-                <div class="post-info">
-                    <p>
-                        04.06.2019, username564
-                    </p>
-                </div>
-
-                <img src="https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg"
-                     alt="post-img" class="post-img">
-                <div class="content-post">
-                    <p class="content-text">
-                        Do you find yourself in the design industry? Are you managing
-                        the creative projects of the company you work for? Would you
-                        describe yourself as a creative person? If your answer to
-                        any of those questions is a “yes”, then you will likely have
-                        facilitated the purchase of a stock photo, a font or something
-                        similar at some point during your career.
-                        There are currently a plethora of options to choose from when you’re
-                        looking for creative assets for your projects, and it would seem that
-                        there’s constantly bundles and offers popping up all over the web to
-                        make it easy for you. The only problem is – it gets expensive as you
-                        go, and having separate accounts for all the different shops and sites,
-                        can be a bit of a mess to maintain. Storing it all on your hard drive is
-                        even more difficult to do, and navigating the ins and outs of stock
-                        licenses from all these services, is troublesome to say the least.
-                    </p>
-                </div>
-            </div>
-        </div>
+        <?php endforeach;?>
     </div>
-</main>
+</div>
 
 <?php include_once 'footer.php'?>
