@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="coffee.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Profile</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <nav class="nav-link">
+            <a href="login.html">login</a>
+            <a href="register.html">register</a>
+            <a href="posts-list.html">posts list</a>
+            <a href="profile.html">profile</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main">
+    <div class="container">
+        <div class="profile">
+            <div class="profile-info">
+                <div class="profile-image-container">
+                    <img src="https://www.french-weekendbreaks.co.uk/sites/uk.picardiev3/themes/picardiev3/img_v2/user-default.jpg"
+                         alt="sda" class="profile-image">
+                </div>
+
+                <div class="profile-user-data">
+                    <h3>Username</h3>
+                    <p>helloname3@gmail.com</p>
+                </div>
+            </div>
+            <form action="profile.html" method="post">
+                <div class="edit-form-block">
+                    <label for="email">Email</label>
+                    <div class="inp-cont">
+                        <input type="email" name="email" id="email">
+                    </div>
+                </div>
+
+                <div class="edit-form-block">
+                    <label for="username">Username</label>
+                    <div class="inp-cont">
+                        <input type="text" name="username" id="username">
+                    </div>
+                </div>
+
+                <div class="edit-form-block">
+                    <label for="password">Password</label>
+                    <div class="inp-cont">
+                        <input type="password" name="password" id="password">
+                    </div>
+                </div>
+
+                <div class="edit-form-block">
+                    <label for="username">Confirm Password</label>
+                    <div class="inp-cont">
+                        <input type="password" name="confirm-password" id="confirm-password">
+                    </div>
+                </div>
+
+                <button type="submit" class="save-button">Save</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2020 Copyright: my-framework.com</p>
+    </div>
+</footer>
+</body>
+</html>
