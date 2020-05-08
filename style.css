@@ -134,6 +134,47 @@ body {
     text-transform: uppercase;
 }
 
+/**============FormsAuth====================*/
+
+.form-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-auth {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px 0 20px;
+}
+
+.form-auth-title {
+    color: #575757;
+}
+
+.input-container {
+    width: 100%;
+    margin: 15px 0 15px 0;
+}
+
+.input-container input{
+    width: 100%;
+    height: 45px;
+    margin: 5px 0 5px 0;
+    padding-left: 8px;
+}
+
+.form-auth-button {
+    background-color: #4272d8;
+    border: none;
+    padding: 15px;
+    color: white;
+    text-transform: uppercase;
+}
+
 /*=============Footer==================*/
 
 .footer {
