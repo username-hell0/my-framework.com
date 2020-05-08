@@ -15,5 +15,5 @@ interface RouterInterface
      *
      * @return array
      */
-    public function getController() : array;
+    public function getController(): array;
 }

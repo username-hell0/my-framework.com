@@ -10,5 +10,5 @@ namespace Core\View;
  */
 interface ViewInterface
 {
-    public function render(string $view, array $data) : void;
+    public function render(string $view, array $data): void;
 }

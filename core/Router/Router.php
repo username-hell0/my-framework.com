@@ -29,7 +29,7 @@ class Router implements RouterInterface
      *
      * @return string
      */
-    private function getUrl() : string
+    private function getUrl(): string
     {
         $url = $_SERVER['REQUEST_URI'];
 
@@ -43,7 +43,7 @@ class Router implements RouterInterface
      *
      * @return string
      */
-    private function fullName(string $controller) : string
+    private function fullName(string $controller): string
     {
         return "\App\Controllers\\$controller";
     }
